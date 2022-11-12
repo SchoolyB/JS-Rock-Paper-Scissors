@@ -1,49 +1,63 @@
+// TODO: need to find bug that causes conditionals to run even when they shouldn't
+
+//  MAIN FUNCTION
 function main() {
-  let userInput = prompt("choose rock, paper, or scissors"); 
-  let  userResult = alert(`You chose ${userInput}`)
-  let compInput = Math.random();
+
+  // DECLARING COMPINPUT VAR TO USE MATH.RANDOM()
+    let compInput = Math.random();
+    
+  // DECLARING POSSIBLE OPTION FOR USER AND COMP
+    let option = [
+      "rock",
+      "paper",
+      "scissors"
+    ];
   
-  if (compInput < .33) { //COMP CHOSE ROCK
-    if (userInput === "rock") {
-      alert("Both players chose rock its a draw")
-    } else if (userInput === "paper") {
-        alert("The computer chose rock and you chose paper...Paper covers rock you win")
-    } else if (userInput === "scissors") {
-        alert("the computer chose rock ... and you chose scissors...rock smashes scissors you lose")
+    // INITIAL PROMPT AND DECLARING USERINPUT VAR
+    let userInput = prompt(`Please select either,
+    ${option[0]},
+    ${option[1]},
+    ${option[2]}`);
+   
+    //  CALL BACK TO USER CHOICE
+  alert(`You chose ${userInput}`) 
+  
+    // EQUATING COMP MATH DECISIONS TO GIVEN OPTION
+    if (compInput <= .33) {
+      compInput = option[0]
+    } else if (compInput >= .66) {
+      compInput = option[1]
     } else { 
-        alert("Please enter a valid response")
-      }
-  }
-  if (compInput === .66) { //COMP CHOSE PAPER
-    if (userInput === "rock") {
-      alert("the computer chose paper.. and you chose rock...paper covers rock you lose")
-    } else if (userInput === "paper") {
-        alert("Both players chose paper its a draw")
-    } else if (userInput === "scissors") { 
-        alert("the computer chose paper..and you chose scissors. scissors cuts paper you win")
-    } else {
-        alert("Please enter a valid response")
+      compInput = option[2]
     }
-  }
-    
-  if (compInput > .66) { //COMP CHOSE SCISSORS
-    if (userInput === "rock") { 
-      alert("The computer chose scissor..and you chose rock...rock smashes scissors you win")
-    } else if (userResult === "paper") {
-        alert("The computer chose scissors and you chose paper..scissors cuts paper you lose")
-    } else if (userInput === "scissors") {
-        alert("BOTH PLAYERS CHOSE SCISSORS ITS A DRAW")
-    }
-    else {
-        alert("Please enter a valid response")
-    }
-  }
-    
-  else {
-    alert("this wasn't supposed to happen");
-  }
-
-
-}
-
-main();
+  
+  // USER ROCK CONDITIONS
+    if (userInput, compInput === option[0]) {
+      alert(`Both players chose ${option[0]} its a draw`)
+    } else if (userInput === option[0], compInput === option[1]){
+      alert(`You chose  ${option[0]}, and the computer chose ${option[1]}...Paper covers rock you lose`)
+    } else if (userInput === option[0], compInput === option[2]) {
+      alert(`You chose ${option[0]} and the computer chose ${option[2]}...Rock smashes scissors you win`)
+    } 
+  
+    // USER PAPER CONDITIONS
+    if (userInput, compInput === option[1]) {
+      alert(`Both players chose ${option[1]} its a draw`)
+    } else if (userInput === option[1], compInput === option[0]){
+      alert(`You chose  ${option[1]}, and the computer chose ${option[0]}...Paper covers rock you win`)
+    } else if (userInput === option[1], compInput === option[2]) {
+      alert(`You chose ${option[1]} and the computer chose ${option[2]}...Scissors cuts paper you lose`)
+    } 
+  
+    // USER SCISSORS CONDITIONS
+    if (userInput, compInput === option[2]) {
+      alert(`Both players chose ${option[2]} its a draw`)
+    } else if (userInput === option[2], compInput === option[0]){
+      alert(`You chose  ${option[2]}, and the computer chose ${option[0]}...Rock smashes scissors you lose`)
+    } else if (userInput === option[2], compInput === option[1]) {
+      alert(`You chose ${option[2]} and the computer chose ${option[1]}...Scissors cuts paper you win`)
+    } 
+  
+  };
+  
+  main();
