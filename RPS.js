@@ -18,7 +18,6 @@ function main() {
     ${option[0]},
     ${option[1]},
     ${option[2]}`);
-   
     //  CALL BACK TO USER CHOICE
   alert(`You chose ${userInput}`) 
   
@@ -30,31 +29,33 @@ function main() {
     } else { 
       compInput = option[2]
     }
+ 
   
+    
   // USER ROCK CONDITIONS
-    if (userInput, compInput === option[0]) {
+    if (userInput && compInput === option[0]) {
       alert(`Both players chose ${option[0]} its a draw`)
-    } else if (userInput === option[0], compInput === option[1]){
+    } else if (userInput === option[0] && compInput === option[1]){
       alert(`You chose  ${option[0]}, and the computer chose ${option[1]}...Paper covers rock you lose`)
-    } else if (userInput === option[0], compInput === option[2]) {
+    } else if (userInput === option[0] && compInput === option[2]) {
       alert(`You chose ${option[0]} and the computer chose ${option[2]}...Rock smashes scissors you win`)
     } 
   
     // USER PAPER CONDITIONS
-    if (userInput, compInput === option[1]) {
+    if (userInput && compInput === option[1]) {
       alert(`Both players chose ${option[1]} its a draw`)
-    } else if (userInput === option[1], compInput === option[0]){
+    } else if (userInput === option[1] && compInput === option[0]){
       alert(`You chose  ${option[1]}, and the computer chose ${option[0]}...Paper covers rock you win`)
-    } else if (userInput === option[1], compInput === option[2]) {
+    } else if (userInput === option[1] && compInput === option[2]) {
       alert(`You chose ${option[1]} and the computer chose ${option[2]}...Scissors cuts paper you lose`)
     } 
   
     // USER SCISSORS CONDITIONS
-    if (userInput, compInput === option[2]) {
+    if (userInput && compInput === option[2]) {
       alert(`Both players chose ${option[2]} its a draw`)
-    } else if (userInput === option[2], compInput === option[0]){
+    } else if (userInput === option[2] && compInput === option[0]){
       alert(`You chose  ${option[2]}, and the computer chose ${option[0]}...Rock smashes scissors you lose`)
-    } else if (userInput === option[2], compInput === option[1]) {
+    } else if (userInput === option[2] && compInput === option[1]) {
       alert(`You chose ${option[2]} and the computer chose ${option[1]}...Scissors cuts paper you win`)
     } 
   
