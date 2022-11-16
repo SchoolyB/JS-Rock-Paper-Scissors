@@ -4,7 +4,10 @@
 // TODO: WORK ON FUNCTION THAT SHOWS COMPUTERS CHOICE WHEN IT DECIDES
 // TODO: ADD A TIMER THAT APPEARS ON SCREEN
 // TODO: ADD A SCOREBOARD AT TOP OF WEBPAGE
+// TODO: ADD BUTTON TO START THE GAME WHICH RUNS RPS() FUNCTION
+// TODO: MAKE BACKGROUND FOR IMAGES TRANSPARENT...LOOK INTO SVG FILE TYPES INSTEAD OF PNG
 // TODO: ADD MORE TODOS......
+
 //IDEA:
 //PUT A TIMER IN PROGRAM AND AS IT COUNTS FROM 1 UP TO 3
 //IT WILL DISPLAY TEXT ON SCREEN THAT SAYS "ROCK, PAPER, SCISSORS,SHOOT!"
@@ -16,11 +19,9 @@
 let userScore = 0  
 let compScore = 0
 
-
 function tell_score() {
 alert(`Your score is ${userScore} to the computers ${compScore}`)
 }
-
 
   function RPS() {
     let compInput = Math.random()
@@ -35,6 +36,8 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
       userInput = "scissors"
     }
 
+
+
     if (compInput <= .33) {
       compInput = "rock"
     } else if (compInput >= .66) {
@@ -43,48 +46,48 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
       compInput = "scissors"
     }
 
+    //ESTABLISHING A DRAW CONDITION
     if (userInput === compInput) {
       alert("its a draw")
     };
 
 
-    // USER ROCK INPUT
+    //USER ROCK LOSE CONDITION
     if (userInput === "rock" && compInput === "paper") {
       alert(`You chose ${userInput} and the computer chose ${compInput}...paper covers rock you lose`)
       compScore = compScore + 1;
-  
     }
-  
+
+    //USER ROCK WIN CONDITION 
     if (userInput === "rock" && compInput === "scissors") {
       alert(`You  chose ${userInput} and the computer chose ${compInput}...rock smashes scissors you win!`)
       userScore = userScore + 1;
     }
 
-
-    //USER PAPER INPUT  
+    //USER PAPER WIN CONDITION  
     if (userInput === "paper" && compInput === "rock") {
       alert(`You  chose ${userInput} and the computer chose ${compInput}...paper covers rock you win`)
       userScore = userScore + 1;
     }
 
+    //USER PAPER LOSE CONDITION 
     if (userInput === "paper" && compInput === "scissors") {
       alert(`You chose ${userInput} and the computer chose ${compInput}...paper covers scissors you lose`)
       compScore = compScore + 1;
     }
-  
-  
-    //USER SCISSORS INPUT
+
+    //USER SCISSORS LOSE CONDITION
     if (userInput === "scissors" && compInput === "rock") {
       alert(`You chose ${userInput} and the computer chose ${compInput}...rock smashes scissors you lose`)
       compScore = compScore + 1;
-    }
-  
+    }   
+    //USER SCISSORS WIN CONDITION
     if (userInput === "scissors" && compInput === "paper") {
       alert(`You chose ${userInput} and the computer chose ${compInput}...scissors cuts paper you win`)
       userScore = userScore + 1;
     }
-
-    //ESCAPE SEQUENCE 
+    
+    //MAIN FUNCTION ESCAPE SEQUENCE 
     function run_again() {
       let play_again = prompt("Would you like to play again? Enter yes or no")
       if (play_again === "yes" === "YES") {
@@ -92,28 +95,39 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
       }
     }
 
-
-
     tell_score();
     run_again();
-
 }
 
 RPS();
-
 
 //NOW FOR THE FUN STUFF.....
 
 
 //FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
 function display_rock() {
-  const img_of_rock = document.getElementById("rock").style.visibility = "visible";
+  document.getElementById("rock").style.visibility = "visible";
 }
+
+setTimeout(display_rock, 1000);
+
+
 //FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
 function display_paper() {
-  const img_of_rock = document.getElementById("paper").style.visibility = "visible";
+  document.getElementById("paper").style.visibility = "visible";
 }
+setTimeout(display_paper, 2000);
+
+
 //FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
 function display_scissors() {
-  const img_of_rock = document.getElementById("scissors").style.visibility = "visible";
+  document.getElementById("scissors").style.visibility = "visible";
 }
+setTimeout(display_scissors, 3000);
+
+
+//FUNCTION TO DISPLAY AN IMAGE OF A CARTOON EXPLOSION ON SCREEN 
+function display_explosion() {
+  document.getElementById("shoot").style.visibility = "visible";
+}
+setTimeout(display_explosion)

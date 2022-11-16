@@ -10,16 +10,19 @@
   <div id = "game">
     <h3>ROCK PAPER SCISSORS</h3>
     <div name = "scoreboard">
-
     </div>
-    <button id="rock" onclick="display_rock()">ROCK</button>
-    <button id="paper" onclick="display_paper()">PAPER</button>
-    <button id="scissors"onclick="display_scissors()">SCISSORS</button>
+    <div>
+      <button onclick="startGame()">start</button>
+    </div>
+    <button onclick="display_rock()">ROCK</button>
+    <button onclick="display_paper()">PAPER</button>
+    <button onclick="display_scissors()">SCISSORS</button>
   </div>
   <div name = "area to display choices">
-    <a href="assets/rock.png"></a>
-    <a href="assets/paper.png"></a>
-    <a href="assets/scissors.png"></a>
+    <img src="assets/rock.png" alt="hand gesture of rock" id="rock">
+    <img src="assets/paper.png" alt="hand gesture of paper" id="paper">
+    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors">
+    <img src="assets/cartoon-explosion.png" alt="cartoonish " id="shoot">
   </div>
 </body>
 </html>
