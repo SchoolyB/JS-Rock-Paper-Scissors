@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Rock Paper Scissors</title>
 </head>
 <body>
   <div id = "game">
-    <h3>ROCK PAPER SCISSORS</h3>
+    <h3 id="test" >ROCK PAPER SCISSORS</h3>
     <div name = "scoreboard">
     </div>
     <div>
-      <button onclick="startGame()">start</button>
+      <button>start</button>
     </div>
-    <button onclick="display_rock()">ROCK</button>
-    <button onclick="display_paper()">PAPER</button>
-    <button onclick="display_scissors()">SCISSORS</button>
+    <button id="rock_btn">ROCK</button>
+    <button id="paper_btn">PAPER</button>
+    <button id="scissors_btn">SCISSORS</button>
   </div>
-  <div name = "area to display choices">
-    <img src="assets/rock.png" alt="hand gesture of rock" id="rock">
-    <img src="assets/paper.png" alt="hand gesture of paper" id="paper">
-    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors">
+  <div name = "area to display choices" id="selection">
+    <img src="assets/rock.png" alt="hand gesture of rock" id="rock-hand" >
+    <img src="assets/paper.png" alt="hand gesture of paper" id="paper-hand">
+    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors-hand">
     <img src="assets/cartoon-explosion.png" alt="cartoonish " id="shoot">
+  
   </div>
+  <script src = "../backend/RPS.js"></script>
 </body>
 </html>

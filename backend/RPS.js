@@ -104,30 +104,21 @@ RPS();
 //NOW FOR THE FUN STUFF.....
 
 
-//FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
-function display_rock() {
-  document.getElementById("rock").style.visibility = "visible";
+
+
+function hide_rock() {
+  let x = document.getElementById("rock-hand");
+  x.style.opacity = 0;
 }
 
-setTimeout(display_rock, 1000);
-
-
-//FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
-function display_paper() {
-  document.getElementById("paper").style.visibility = "visible";
+function hide_paper() {
+  let y = document.getElementById("paper-hand");
+  y.style.opacity = 0;
 }
-setTimeout(display_paper, 2000);
 
-
-//FUNCTION TO DISPLAY AN IMAGE OF THE USERS CHOICE ON SCREEN
-function display_scissors() {
-  document.getElementById("scissors").style.visibility = "visible";
+function hide_scissors() {
+  let z = document.getElementById("scissors-hand");
+  z.style.opacity = 0;
 }
-setTimeout(display_scissors, 3000);
 
-
-//FUNCTION TO DISPLAY AN IMAGE OF A CARTOON EXPLOSION ON SCREEN 
-function display_explosion() {
-  document.getElementById("shoot").style.visibility = "visible";
-}
-setTimeout(display_explosion)
+hide_rock();
