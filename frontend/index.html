@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="index.css">
   <title>Rock Paper Scissors</title>
 </head>
-<body>
+<body onload="hide_images()">
   <div id = "game">
     <h3 id="test" >ROCK PAPER SCISSORS</h3>
     <div name = "scoreboard">
     </div>
     <div>
-      <button>start</button>
+      <button onclick="RPS()" >start</button>
+      <button onclick="run_again()">Play Again???</button>
     </div>
-    <button id="rock_btn">ROCK</button>
+    <button onclick=""  id="rock_btn">ROCK</button>
     <button id="paper_btn">PAPER</button>
     <button id="scissors_btn">SCISSORS</button>
   </div>

@@ -13,8 +13,30 @@
 //IT WILL DISPLAY TEXT ON SCREEN THAT SAYS "ROCK, PAPER, SCISSORS,SHOOT!"
 //AS IT DISPLAYS TEXT FOR EACH CHOICE, THE IMAGES OF EACH CHOICE WOULD
 //APPEAR BRIEFLY ON SCREEN AND THEN QUICKLY FADE OUT. ONCE THE WORD "SHOOT"
-//APPEARS ON SCREEN THE IMAGES OF BOTH THE COMPUTER AND USER SELECTION 
-//WILL BE DISPLAYED.....COOL IDEA. GOOD JS PRACTICE  
+//APPEARS ON SCREEN THE IMAGES OF BOTH THE COMPUTER AND USER SELECTION
+//WILL BE DISPLAYED.....COOL IDEA. GOOD JS PRACTICE
+
+
+  
+function show_rock() {
+  let a = document.getElementById("rock-hand");
+  a.style.opacity = 1;
+}
+  (setTimeout(show_rock, 4000));
+
+function show_paper() {
+  let b = document.getElementById("paper-hand");
+  b.style.opacity = 1;
+}
+  (setTimeout(show_paper, 5000));
+
+function show_scissors() {
+  let c = document.getElementById("scissors-hand");
+  c.style.opacity = 1;
+}
+  (setTimeout(show_scissors, 6000));
+
+
 
 let userScore = 0  
 let compScore = 0
@@ -23,11 +45,10 @@ function tell_score() {
 alert(`Your score is ${userScore} to the computers ${compScore}`)
 }
 
-  function RPS() {
+function RPS() {
     let compInput = Math.random()
     let userInput = prompt("Please choose either rock paper or scissors")
     
-
     if (userInput === "rock") {
       userInput = "rock"
     } else if (userInput === "paper") {
@@ -35,8 +56,6 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
     } else if (userInput === "scissors") {
       userInput = "scissors"
     }
-
-
 
     if (compInput <= .33) {
       compInput = "rock"
@@ -49,8 +68,7 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
     //ESTABLISHING A DRAW CONDITION
     if (userInput === compInput) {
       alert("its a draw")
-    };
-
+    }
 
     //USER ROCK LOSE CONDITION
     if (userInput === "rock" && compInput === "paper") {
@@ -94,31 +112,26 @@ alert(`Your score is ${userScore} to the computers ${compScore}`)
         RPS();
       }
     }
-
     tell_score();
-    run_again();
-}
 
-RPS();
+}
 
 //NOW FOR THE FUN STUFF.....
 
 
-
-
-function hide_rock() {
+// DECLARING FUNCTIONS TO HIDE RPS IMAGES // CHANGE X,Y,Z VARS TO SOMETHING ELSE
+function hide_images() {
   let x = document.getElementById("rock-hand");
   x.style.opacity = 0;
-}
-
-function hide_paper() {
   let y = document.getElementById("paper-hand");
   y.style.opacity = 0;
-}
-
-function hide_scissors() {
   let z = document.getElementById("scissors-hand");
   z.style.opacity = 0;
 }
 
-hide_rock();
+show_rock();
+show_paper();
+show_scissors();
+
+
+//DECLARING FUNCTION TO SHOW RPS IMAGES // CHANGE A,B,C VARS TO SOMETHING ELSE
