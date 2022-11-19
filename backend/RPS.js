@@ -4,8 +4,9 @@
 // TODO: WORK ON FUNCTION THAT SHOWS COMPUTERS CHOICE WHEN IT DECIDES
 // TODO: ADD A TIMER THAT APPEARS ON SCREEN
 // TODO: ADD A SCOREBOARD AT TOP OF WEBPAGE
-// TODO: ADD BUTTON TO START THE GAME WHICH RUNS RPS() FUNCTION
+// TODO: ADD BUTTON TO START THE GAME WHICH RUNS main() FUNCTION
 // TODO: MAKE BACKGROUND FOR IMAGES TRANSPARENT...LOOK INTO SVG FILE TYPES INSTEAD OF PNG
+// TODO: BUILD A NEW run_again() FUNCTION
 // TODO: ADD MORE TODOS......
 
 //IDEA:
@@ -17,46 +18,19 @@
 //WILL BE DISPLAYED.....COOL IDEA. GOOD JS PRACTICE
 
 
-  
-function show_rock() {
-  let a = document.getElementById("rock-hand");
-  a.style.opacity = 1;
+
+import { userInput, compInput } from "../backend/selections.js"
+
+let score = {
+  userScore : 0,
+  compScore : 0
 }
-  (setTimeout(show_rock, 4000));
-
-function show_paper() {
-  let b = document.getElementById("paper-hand");
-  b.style.opacity = 1;
-}
-  (setTimeout(show_paper, 5000));
-
-function show_scissors() {
-  let c = document.getElementById("scissors-hand");
-  c.style.opacity = 1;
-}
-  (setTimeout(show_scissors, 6000));
-
-
-
-let userScore = 0  
-let compScore = 0
 
 function tell_score() {
-alert(`Your score is ${userScore} to the computers ${compScore}`)
+alert(`Your score is ${score.userScore} to the computers ${score.compScore}`)
 }
 
-function RPS() {
-    let compInput = Math.random()
-    let userInput = prompt("Please choose either rock paper or scissors")
-    
-    if (userInput === "rock") {
-      userInput = "rock"
-    } else if (userInput === "paper") {
-      userInput = "paper"
-    } else if (userInput === "scissors") {
-      userInput = "scissors"
-    }
-
+function main() {
     if (compInput <= .33) {
       compInput = "rock"
     } else if (compInput >= .66) {
@@ -67,51 +41,57 @@ function RPS() {
 
     //ESTABLISHING A DRAW CONDITION
     if (userInput === compInput) {
-      alert("its a draw")
+      document.getElementById("tie").style.opacity = 1;
     }
 
     //USER ROCK LOSE CONDITION
     if (userInput === "rock" && compInput === "paper") {
-      alert(`You chose ${userInput} and the computer chose ${compInput}...paper covers rock you lose`)
+      document.getElementById("rock_hand").style.opacity = 1;
+      document.getElementById("paper_hand").style.opacity = 1;
+      document.getElementById("user_red_x").style.opacity = 1; 
       compScore = compScore + 1;
     }
 
     //USER ROCK WIN CONDITION 
-    if (userInput === "rock" && compInput === "scissors") {
-      alert(`You  chose ${userInput} and the computer chose ${compInput}...rock smashes scissors you win!`)
+  if (userInput === "rock" && compInput === "scissors") {
+    document.getElementById("rock_hand").style.opacity = 1;
+    document.getElementById("scissors_hand").style.opacity = 1;
+    document.getElementById("comp_red_x").style.opacity = 1;
       userScore = userScore + 1;
     }
 
     //USER PAPER WIN CONDITION  
-    if (userInput === "paper" && compInput === "rock") {
-      alert(`You  chose ${userInput} and the computer chose ${compInput}...paper covers rock you win`)
+  if (userInput === "paper" && compInput === "rock") {
+    document.getElementById("paper_hand").style.opacity = 1;
+    document.getElementById("rock_hand").style.opacity = 1;
+    document.getElementById("comp_red_x").style.opacity = 1;
       userScore = userScore + 1;
     }
 
     //USER PAPER LOSE CONDITION 
-    if (userInput === "paper" && compInput === "scissors") {
-      alert(`You chose ${userInput} and the computer chose ${compInput}...paper covers scissors you lose`)
+  if (userInput === "paper" && compInput === "scissors") {
+    document.getElementById("paper_hand").style.opacity = 1;
+    document.getElementById("scissor_hand").style.opacity = 1;
+    document.getElementById("user_red_x").style.opacity = 1;
       compScore = compScore + 1;
     }
 
     //USER SCISSORS LOSE CONDITION
-    if (userInput === "scissors" && compInput === "rock") {
-      alert(`You chose ${userInput} and the computer chose ${compInput}...rock smashes scissors you lose`)
+  if (userInput === "scissors" && compInput === "rock") {
+    document.getElementById("scissors_hand").style.opacity = 1;
+    document.getElementById("rock_hand").style.opacity = 1;
+    document.getElementById("red_red_x").style.opacity = 1;
       compScore = compScore + 1;
     }   
     //USER SCISSORS WIN CONDITION
-    if (userInput === "scissors" && compInput === "paper") {
-      alert(`You chose ${userInput} and the computer chose ${compInput}...scissors cuts paper you win`)
+  if (userInput === "scissors" && compInput === "paper") {
+    document.getElementById("scissors_hand").style.opacity = 1;
+    document.getElementById("paper_hand").style.opacity = 1;
+    document.getElementById("comp_red_x").style.opacity = 1;
       userScore = userScore + 1;
     }
     
-    //MAIN FUNCTION ESCAPE SEQUENCE 
-    function run_again() {
-      let play_again = prompt("Would you like to play again? Enter yes or no")
-      if (play_again === "yes" === "YES") {
-        RPS();
-      }
-    }
+    
     tell_score();
 
 }
@@ -119,19 +99,6 @@ function RPS() {
 //NOW FOR THE FUN STUFF.....
 
 
-// DECLARING FUNCTIONS TO HIDE RPS IMAGES // CHANGE X,Y,Z VARS TO SOMETHING ELSE
-function hide_images() {
-  let x = document.getElementById("rock-hand");
-  x.style.opacity = 0;
-  let y = document.getElementById("paper-hand");
-  y.style.opacity = 0;
-  let z = document.getElementById("scissors-hand");
-  z.style.opacity = 0;
-}
 
-show_rock();
-show_paper();
-show_scissors();
-
-
-//DECLARING FUNCTION TO SHOW RPS IMAGES // CHANGE A,B,C VARS TO SOMETHING ELSE
+// EXPORTING FUNCTIONS TO MODULE FILES
+export {score };

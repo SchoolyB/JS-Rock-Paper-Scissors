@@ -8,25 +8,40 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body onload="hide_images()">
-  <div id = "game">
-    <h3 id="test" >ROCK PAPER SCISSORS</h3>
-    <div name = "scoreboard">
+  <header>
+    <h1 id="test" >ROCK PAPER SCISSORS</h1>
+  </header>
+    <div id = "scoreboard">
+      SCORES GO HERE
     </div>
     <div>
-      <button onclick="RPS()" >start</button>
+      <button type="button" onclick="main()">START BUTTON</button>
       <button onclick="run_again()">Play Again???</button>
     </div>
-    <button onclick=""  id="rock_btn">ROCK</button>
-    <button id="paper_btn">PAPER</button>
-    <button id="scissors_btn">SCISSORS</button>
-  </div>
+      <div>
+      <p>
+        Hello lets play a game of rock paper scissors.
+      the rules are simple. Once you click the start button the game will begin.
+      Once the game starts a timer will appear on screen and with it, the words rock paper and scissors and shoot.
+      once the word shoot come appears on screen you the user can click any button below to make your choice.
+      After every round the score will be updated. See how many rounds you can win.
+      </p>
+    </div>
+    <div>
+      <button type="button" id="rock_btn">ROCK</button>
+      <button type="button" id="paper_btn">PAPER</button>
+      <button type="button" id="scissors_btn">SCISSORS</button>
+    </div>
   <div name = "area to display choices" id="selection">
-    <img src="assets/rock.png" alt="hand gesture of rock" id="rock-hand" >
-    <img src="assets/paper.png" alt="hand gesture of paper" id="paper-hand">
-    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors-hand">
-    <img src="assets/cartoon-explosion.png" alt="cartoonish " id="shoot">
-  
+    <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" >
+    <img src="assets/paper.png" alt="hand gesture of paper" id="paper_hand">
+    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors_hand">
+    <img src="assets/cartoon-explosion.png" alt="cartoonish explosion " id="shoot">
+    <img src="assets/redx.png" alt= "a red x" id="user_red_x">
+    <img src="assets/redx.png" alt= "a red x" id="comp_red_x">
+    <img src="assets/tiegame.png" alt= "a tie" id="tie">
   </div>
   <script src = "../backend/RPS.js"></script>
+  <script src="../backend/modules.js">s</script>
 </body>
 </html>
