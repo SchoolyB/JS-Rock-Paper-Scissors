@@ -4,33 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Rock Paper Scissors</title>
 </head>
 <body onload="hide_images()">
-  <header>
-    <h1 id="test" >ROCK PAPER SCISSORS</h1>
-  </header>
+  <div>
+    <header id="main_header">
+      <h1>
+        ROCK PAPER SCISSORS
+      </h1>
+    </header>
+  </div>
     <div id = "scoreboard">
       SCORES GO HERE
     </div>
     <div>
-      <button type="button" onclick="main()">START BUTTON</button>
+      <button type="button" id="start_button" onclick="main()">START</button>
       <button onclick="run_again()">Play Again???</button>
     </div>
       <div>
-      <p>
-        Hello lets play a game of rock paper scissors.
-      the rules are simple. Once you click the start button the game will begin.
-      Once the game starts a timer will appear on screen and with it, the words rock paper and scissors and shoot.
-      once the word shoot come appears on screen you the user can click any button below to make your choice.
-      After every round the score will be updated. See how many rounds you can win.
-      </p>
+      <p id=instructions>
+        Hello lets play a game of rock paper scissors.<br>
+        the rules are simple. Once you click the start button the game will begin.<br>
+        Once the game starts a timer will appear on screen and with it, the words rock paper and scissors and shoot.<br>
+        once the word shoot come appears on screen you the user can click any button below to make your choice.<br>
+        After every round the score will be updated. See how many rounds you can win.<br>
+        </p>
     </div>
     <div>
-      <button type="button" id="rock_btn">ROCK</button>
-      <button type="button" id="paper_btn">PAPER</button>
-      <button type="button" id="scissors_btn">SCISSORS</button>
+      <button class="choice_button" type="button" id="rock_btn">ROCK</button>
+      <button class="choice_button" type="button" id="paper_btn">PAPER</button>
+      <button class="choice_button" type="button" id="scissors_btn">SCISSORS</button>
     </div>
   <div name = "area to display choices" id="selection">
     <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" >

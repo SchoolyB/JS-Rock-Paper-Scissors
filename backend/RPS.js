@@ -39,6 +39,8 @@ function main() {
       compInput = "scissors"
     }
 
+
+  
     //ESTABLISHING A DRAW CONDITION
     if (userInput === compInput) {
       document.getElementById("tie").style.opacity = 1;
