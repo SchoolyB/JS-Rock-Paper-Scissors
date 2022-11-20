@@ -19,7 +19,7 @@
       SCORES GO HERE
     </div>
     <div>
-      <button type="button" id="start_button" onclick="rock_appear()">START</button>
+      <button  onclick="show_rps_on_timer()" type="button" id="start_button" onclick="rock_appear()">START</button>
       <button onclick="run_again()">Play Again???</button>
     </div>
       <div>
@@ -33,9 +33,9 @@
         </p>
     </div>
     <div>
-      <button class="choice_button" type="button" id="rock_btn">ROCK</button>
-      <button class="choice_button" type="button" id="paper_btn">PAPER</button>
-      <button class="choice_button" type="button" id="scissors_btn">SCISSORS</button>
+      <button  class="choice_button" type="button" id="rock_btn">ROCK</button>
+      <button  class="choice_button" type="button" id="paper_btn">PAPER</button>
+      <button  class="choice_button" type="button" id="scissors_btn">SCISSORS</button>
     </div>
   <div name = "area to display choices" id="selection">
     <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" >
@@ -47,6 +47,6 @@
     <img src="assets/tiegame.png" alt= "a tie" id="tie">
   </div>
   <script src = "../backend/RPS.js"></script>
-  <script src="../backend/modules.js"></script>
+  <script src = "../backend/modules.js"></script>
 </body>
 </html>
