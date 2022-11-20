@@ -2,28 +2,17 @@ body{
   margin: 0;
   padding: 0;
   background-color: seashell;
-  overflow: hidden;
 }
 
 #main_header{
   text-align: center;
   text-decoration: underline;
-  background-image: url(../frontend/assets/rps.png);
-  background-repeat: no-repeat;
-  background-size:cover  ;
-  width: 100%;
-  height: 450px;
-  background-position: center;
-}
-
-#scoreboard{
-
-  
 }
 
 #instructions{
   border: 2px solid black;
   color: black;
+  width: 35%;
 
 } 
 
@@ -72,3 +61,6 @@ body{
   background-repeat: no-repeat;
 }
 
+#selection{
+background-color: white;  
+}

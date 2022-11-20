@@ -18,3 +18,5 @@ document.getElementById("paper_btn").addEventListener("click", paper_button_clic
 document.getElementById("scissors_btn").addEventListener("click", scissors_button_clicked);
 // END OF MODULE ONE
 
+
+// MODULE TWO HIDING SHOOT, REDX, AND TIE GAME IMAGES 
