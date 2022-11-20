@@ -19,4 +19,23 @@ document.getElementById("scissors_btn").addEventListener("click", scissors_butto
 // END OF MODULE ONE
 
 
-// MODULE TWO HIDING SHOOT, REDX, AND TIE GAME IMAGES 
+// START OF MODULE TWO...SELECTION AREA IMAGE TIMER FUNCTIONALITY
+function rock_appear() {
+  document.querySelector("rock_hand").style.opacity = 1;
+
+}
+// END OF MODULE TWO
+
+
+
+// START OF MODULE THREE...SELECTION AREA HIDE IMAGES USING JS RATHER THAN CSS
+function hide_images() {
+  document.getElementById("rock_hand").style.display = "none"
+  document.getElementById("paper_hand").style.opacity = 0;
+  document.getElementById("scissors_hand").style.opacity = 0;
+  document.getElementById("shoot").style.opacity = 0;
+  document.getElementById("tie").style.opacity = 0;
+}
+
+
+  

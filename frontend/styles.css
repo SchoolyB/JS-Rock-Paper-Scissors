@@ -8,7 +8,7 @@ body{
   text-align: center;
   text-decoration: underline;
 }
-
+/* instruction paragraphs */
 #instructions{
   border: 2px solid black;
   color: black;
@@ -22,6 +22,7 @@ body{
   border-radius: 50%;
 }
 
+/* CSS for class for user choice buttons */
 .choice_button{
 
   border: none;
@@ -35,14 +36,14 @@ body{
   border: 1px solid black
 
 }
-
+/* Button ID specific CSS */
 #rock_btn:hover{
   
   color: transparent;
   background-image: url(../frontend/assets/rock.png);
   background-size: contain;
   background-repeat: no-repeat;
-  ;
+  
 }
 
 #paper_btn:hover{
@@ -61,6 +62,11 @@ body{
   background-repeat: no-repeat;
 }
 
+
+/*EVERYTHING BELOW THIS LINE WILL BE FOR THE SELECTION AREA AND ITS ASSETS*/
+
+
 #selection{
 background-color: white;  
 }
+
