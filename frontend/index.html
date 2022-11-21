@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <title>Rock Paper Scissors</title>
 </head>
-<body onload="hide_images()">
+<body onload="hide_images_on_load()">
   <div>
     <header id="main_header">
       <h1>
@@ -37,15 +37,19 @@
       <button  class="choice_button" type="button" id="paper_btn">PAPER</button>
       <button  class="choice_button" type="button" id="scissors_btn">SCISSORS</button>
     </div>
-  <div name = "area to display choices" id="selection">
-    <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" >
-    <img src="assets/paper.png" alt="hand gesture of paper" id="paper_hand">
-    <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors_hand">
-    <img src="assets/cartoon-explosion.png" alt="cartoonish explosion " id="shoot">
-    <img src="assets/redx.png" alt= "a red x" id="user_red_x">
-    <img src="assets/redx.png" alt= "a red x" id="comp_red_x">
-    <img src="assets/tiegame.png" alt= "a tie" id="tie">
-  </div>
+    <div id="hand_container">
+      <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" class="hand" >
+      <img src="assets/paper.png" alt="hand gesture of paper" id="paper_hand" class="hand">
+      <img src="assets/scissors.png" alt="hand gesture of scissors" id="scissors_hand" class="hand">
+    </div>
+    <div id="shoot_container">
+      <img src="assets/cartoon-explosion.png" alt="cartoonish explosion " id="shoot">
+    </div>
+    <div name = "area to display choices" id="selection_area">
+      <img src="assets/redx.png" alt= "a red x" id="user_red_x">
+      <img src="assets/redx.png" alt= "a red x" id="comp_red_x">
+      <img src="assets/tiegame.png" alt= "a tie" id="tie">
+    </div>
   <script src = "../backend/RPS.js"></script>
   <script src = "../backend/modules.js"></script>
 </body>

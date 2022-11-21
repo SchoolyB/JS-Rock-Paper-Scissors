@@ -21,7 +21,7 @@ document.getElementById("scissors_btn").addEventListener("click", scissors_butto
 // START OF MODULE TWO...SELECTION AREA HIDE IMAGES USING JS RATHER THAN CSS
 // TODO: need to rename vars
 
-function hide_images() {
+function hide_images_on_load() {
   //hides rock
   const a = document.getElementById("rock_hand");
   a.style.visibility = "hidden";
@@ -49,6 +49,9 @@ function hide_images() {
   //hides comp tie
   const g = document.getElementById("tie")
   g.style.visibility = "hidden";
+
+  const h = document.getElementById("rps_images")
+  h.style.visibility = "hidden"
 }
 // END OF MODULE TWO
 
@@ -75,14 +78,45 @@ function makeShootVisible() {
   }
 
 function show_rps_on_timer() { //shows images on a timer when called FINALLY GOT IT TO WORK
-  makeRockVisible()
-  setTimeout(makePaperVisible, 1500)
+  show_hand_container()
+  setTimeout(makeRockVisible, 1000)
+  setTimeout(makePaperVisible, 2000)
   setTimeout(makeScissorsVisible, 3000)
-  setTimeout(makeShootVisible, 4500)
+  setTimeout(makeShootVisible, 4000)
+  setTimeout(hide_images_after_shown, 5000)
+  setTimeout(hide_hand_container,5000)
 }
 // END OF MODULE THREE
 
 
+// START OF MODULE FOUR...HIDING RPS IMAGES AFTER THEY HAVE APPEARED ON SCREEN// KEEP SHOOT ON SCREEN UNTIL USER AND COMPUTER CHOOSE
+// TODO:change var names
+function hide_images_after_shown() {
 
+  const x = document.getElementById("rock_hand")
+  x.style.visibility = "hidden"
+
+    
+  const y = document.getElementById("paper_hand")
+  y.style.visibility = "hidden"
+
+    
+  const z = document.getElementById("scissors_hand")
+  z.style.visibility = "hidden"
+}
+// END OF MODULE FOUR
+
+
+
+// START OF MODULE FIVE...SHOWS  AND HIDES THE CONTAINER THAT HAS THE RPS HAND IMAGES 
+function show_hand_container() {
+  const showHandContainer = document.getElementById("hand_container")
+  showHandContainer.style.visibility = "visible"
+}
+
+function hide_hand_container() {
+  const hideHandContainer = document.getElementById("hand_container")
+  hideHandContainer.style.visibility = "hidden"
+}
 
 

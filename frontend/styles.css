@@ -8,7 +8,7 @@ body{
   text-align: center;
   text-decoration: underline;
 }
-/* instruction paragraphs */
+/* instruction paragraph */
 #instructions{
   border: 2px solid black;
   color: black;
@@ -20,6 +20,19 @@ body{
 #start_button{
   background-color: red;
   border-radius: 50%;
+}
+/* div container for hands */
+#hand_container{
+  background-color: black;
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* CSS for hands that appear on timer */
+.hand{
+  text-align: center;
+  margin: 25px;
 }
 
 /* CSS for class for user choice buttons */
