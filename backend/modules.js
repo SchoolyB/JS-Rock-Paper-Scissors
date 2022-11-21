@@ -47,10 +47,10 @@ function hide_images_on_load() {
   f.style.visibility = "hidden";
 
   //hides comp tie
-  const g = document.getElementById("tie")
+  const g = document.getElementById("tie_game")
   g.style.visibility = "hidden";
-
-  const h = document.getElementById("rps_images")
+  //hides the nad div on load
+  const h = document.getElementById("hand_container")
   h.style.visibility = "hidden"
 }
 // END OF MODULE TWO
@@ -84,7 +84,7 @@ function show_rps_on_timer() { //shows images on a timer when called FINALLY GOT
   setTimeout(makeScissorsVisible, 3000)
   setTimeout(makeShootVisible, 4000)
   setTimeout(hide_images_after_shown, 5000)
-  setTimeout(hide_hand_container,5000)
+  setTimeout(hide_hand_container, 5000)
 }
 // END OF MODULE THREE
 
@@ -107,7 +107,6 @@ function hide_images_after_shown() {
 // END OF MODULE FOUR
 
 
-
 // START OF MODULE FIVE...SHOWS  AND HIDES THE CONTAINER THAT HAS THE RPS HAND IMAGES 
 function show_hand_container() {
   const showHandContainer = document.getElementById("hand_container")
@@ -118,5 +117,13 @@ function hide_hand_container() {
   const hideHandContainer = document.getElementById("hand_container")
   hideHandContainer.style.visibility = "hidden"
 }
+// END OF MODULE FIVE
 
 
+// START OF MODULE SIX...HIDES THE SHOOT IMAGE AFTER THE BOTH USERS MAKE THEIR DECISION
+// TODO: incomplete function
+function hide_shoot_after_shown() {
+  const hideShoot = document.getElementById("shoot")
+  hideShoot.style.visibility = "hidden"
+}
+// END OF MODULE SIX

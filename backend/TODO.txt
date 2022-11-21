@@ -1,0 +1,2 @@
+TODO: work on css and make "sides" for user and computer. images should appear on both sides.
+TODO: a whole lot more

@@ -29,6 +29,18 @@ body{
   text-align: center;
 }
 
+#user_side{
+  background-color: orange;
+  text-align: center;
+  width: 50%;
+}
+
+#comp_side{
+  background-color: purple;
+  text-align: center;
+  width: 50%;
+}
+
 /* CSS for hands that appear on timer */
 .hand{
   text-align: center;
