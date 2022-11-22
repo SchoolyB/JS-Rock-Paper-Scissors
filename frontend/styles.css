@@ -2,6 +2,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: seashell;
+  overflow-y:scroll;
 }
 
 #main_header{
@@ -33,12 +34,45 @@ body{
   background-color: orange;
   text-align: center;
   width: 50%;
+  height: 500px;
 }
 
 #comp_side{
   background-color: purple;
   text-align: center;
   width: 50%;
+  height: 500px;
+  float: right;
+  position: relative; bottom:500px
+}
+
+
+#middle_section{
+  background-color: white;
+  text-align: center;
+  height: 250px;
+  width: 250px;
+  z-index: 3;
+  position: relative;  bottom: 350px; left: 130px;
+  float: right;
+}
+
+#shoot{
+  z-index: 3;
+  position: relative;
+}
+
+#tie_game{
+  position: relative; bottom: 225px;
+}
+
+#user_red_x{
+  position: relative; top:100px;
+}
+
+#comp_red_x{
+  position: relative; top:100px;
+
 }
 
 /* CSS for hands that appear on timer */
