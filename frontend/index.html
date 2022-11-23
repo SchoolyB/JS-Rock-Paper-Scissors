@@ -19,7 +19,7 @@
       SCORES GO HERE
     </div>
     <div>
-      <button  onclick="show_rps_on_timer()" type="button" id="start_button" onclick="rock_appear()">START</button>
+      <button onclick="show_rps_on_timer()" type="button" id="start_button" onclick="rock_appear()">START</button>
       <button onclick="run_again()">Play Again???</button>
     </div>
       <div>
@@ -33,9 +33,9 @@
         </p>
     </div>
     <div>
-      <button  class="choice_button" type="button" id="rock_btn">ROCK</button>
-      <button  class="choice_button" type="button" id="paper_btn">PAPER</button>
-      <button  class="choice_button" type="button" id="scissors_btn">SCISSORS</button>
+      <button  class="choice_button" type="button" id="rock_btn" onclick="userChoosesRock()" >ROCK</button>
+      <button  class="choice_button" type="button" id="paper_btn" onclick="userChoosesPaper()">PAPER</button>
+      <button  class="choice_button" type="button" id="scissors_btn" onclick="userChoosesScissors()">SCISSORS</button>
     </div>
     <div id="hand_container">
       <img src="assets/rock.png" alt="hand gesture of rock" id="rock_hand" class="hand" >
@@ -55,13 +55,14 @@
         <img src="assets/paper.png" alt="hand gesture of paper" id="comp_paper_hand" class="comp_hand">
         <img src="assets/scissors.png" alt="hand gesture of scissors" id="comp_scissors_hand" class="comp_hand">
       </div>
-      <div id="middle_section">
+      <div id="middle_section_container">
         <img src="assets/cartoon-explosion.png" alt="cartoonish explosion " id="shoot">
         <img src="assets/tiegame.png" alt= "a tie" id="tie_game">
       </div>
       
     </div>
   <script src = "../backend/RPS.js"></script>
-  <!--_<script src = "../backend/modules.js"></script> REMOVE COMMENT AFTER CSS WORKS-->
+ <script src = "../backend/modules.js"></script>
+ 
 </body>
 </html>

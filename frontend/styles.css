@@ -47,8 +47,8 @@ body{
 }
 
 
-#middle_section{
-  background-color: white;
+#middle_section_container{
+  background-color: transparent;
   text-align: center;
   height: 250px;
   width: 250px;
@@ -68,12 +68,41 @@ body{
 
 #user_red_x{
   position: relative; top:100px;
+  z-index: 3;
+  position: relative; left: 175px
 }
-
 #comp_red_x{
   position: relative; top:100px;
+  z-index: 3;
+  position: relative; left: 175px;
+}
+
+#user_rock_hand{
+  position: relative; right: 50px; bottom: -10px;
+}
+
+#user_paper_hand{
+  position: relative; right: 260px; bottom: -100px;
+}
+
+#user_scissors_hand{
+  position: relative; right: 50px; bottom: 60px;
 
 }
+
+#comp_rock_hand{
+  position: relative; right:0px; bottom: -10px;
+
+}
+#comp_paper_hand{
+  position: relative; right: 210px; bottom: -100px;
+}
+
+#comp_scissors_hand{
+  position: relative; right: 0px; bottom: 70px;
+
+}
+
 
 /* CSS for hands that appear on timer */
 .hand{
