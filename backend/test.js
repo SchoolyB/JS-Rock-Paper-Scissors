@@ -184,68 +184,83 @@ compChooses = () => {
 // !END OF MODULE NINE
 
 
-// !START OF MODULE TEN...DETERMINES IF THE USER OR COMP WINS OR LOSSES/KEEPS A SCORE
+// !START OF MODULE TEN...KEEPS A SCORE
 // !ALSO MAKES RED X APPEAR OVER THE LOSER SIDE
   //USER ROCK LOSE CONDITION  
 rockLoser = () => {
-
-  if (userInput === "rock" && compInput === "paper") {
-    const userRockLosses = document.getElementById("user_red_x")
-    userRockLosses.style.visibility = "visible"
-    compScore = compScore + 1;
-
-  }
+  const userRockLosses = document.getElementById("user_red_x")
+  userRockLosses.style.visibility = "visible"
+  compScore = compScore + 1;
 }
 
 rockWinner = () => {
   //USER ROCK WIN CONDITION 
-  if (userInput === "rock" && compInput === "scissors") {
-    const userRockWins = document.getElementById("comp_red_x")
-    userRockWins.style.visibility = "visible"
-    userScore = userScore + 1;
-  }
+  const userRockWins = document.getElementById("comp_red_x")
+  userRockWins.style.visibility = "visible"
+  userScore = userScore + 1;
 }
 
 paperWinner = () => {
-  //USER PAPER WIN CONDITION
-  if (userInput === "paper" && compInput === "rock") {
+  //USER PAPER WIN CONDITIONs
     const userPaperWins = document.getElementById("comp_red_x")
     userPaperWins.style.visibility = "visible"
     userScore = userScore + 1;
-  }
 }
 
 paperLoser = () => {
   //USER PAPER LOSE CONDITION 
-  if (userInput === "paper" && compInput === "scissors") {
     const userPaperLoses = document.getElementById("user_red_x")
     userPaperLoses.style.visibility = "visible"
     compScore = compScore + 1;
-  }
 }
 
 scissorLoser = () => {
   //USER SCISSORS LOSE CONDITION
-  if (userInput === "scissors" && compInput === "rock") {
     const userScissorsLoses = document.getElementById("user_red_x")
     userScissorsLoses.style.visibility = "visible"
     compScore = compScore + 1;
-  }
 }
 
 scissorsWinner = () => {
   //USER SCISSORS WIN CONDITION
-if (userInput === "scissors" && compInput === "paper") {
   const userScissorsWins = document.getElementById("comp_red_x")
   userScissorsWins.style.visibility = "visible";
   userScore = userScore + 1;
-  }
 }
 // !END OF MODULE TEN
 
-// !START OF MODULE ELEVEN...
- 
+// !START OF MODULE ELEVEN...GIVING FUNCTIONS FROM  MODULE 10 RUN CONDITIONS
+
+if (userInput === "rock" && compInput === "paper") {
+  rockLoser();
+}
+  //USER ROCK WIN CONDITION 
+if (userInput === "rock" && compInput === "scissors") {
+  rockWinner();
+}
+
+  //USER PAPER WIN CONDITION
+if (userInput === "paper" && compInput === "rock") {
+  paperWinner();
+}
+
+  //USER PAPER LOSE CONDITION 
+if (userInput === "paper" && compInput === "scissors") {
+  paperLoser();
+}
+
+  //USER SCISSORS LOSE CONDITION
+if (userInput === "scissors" && compInput === "rock") {
+  scissorLoser();
+}
+
+  //USER SCISSORS WIN CONDITION
+if (userInput === "scissors" && compInput === "paper") {
+  scissorsWinner();
+}    
 // !END OF MODULE ELEVEN
+
+
 // ?main function to run game
 main = () => {
 
