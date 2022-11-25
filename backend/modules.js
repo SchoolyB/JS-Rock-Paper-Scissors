@@ -1,5 +1,7 @@
-// !START IF MODULE ONE...
-
+// !START IF MODULE ONE...DECLARE SCORE VARS IN GLOBAL SCOPE
+let userScore = 0;
+let compScore = 0;
+let userInput = ""
 // !END OF MODULE ONE
 
 
@@ -59,7 +61,6 @@ hide_images_on_load = () => {
   const o = document.getElementById("middle_section_container")
   o.style.visibility = "hidden";
 }
-
 // !END OF MODULE TWO
 
 
@@ -147,17 +148,21 @@ show_draw = () => {
 userChoosesRock = () => {
   userInput = "rock"
   const userRock = document.getElementById("user_rock_hand");
+  console.log(`user chose ${userInput}`)
   userRock.style.visibility = "visible";
 }
 
 userChoosesPaper = () => {
   userInput = "paper"
   const userPaper = document.getElementById("user_paper_hand");
+  console.log(`user chose ${userInput}`)
   userPaper.style.visibility = "visible";
 }
 
 userChoosesScissors = () => {
+  userInput = "scissors"
   const userScissors = document.getElementById("user_scissors_hand");
+  console.log(`user chose ${userInput}`)
   userScissors.style.visibility = "visible";
 }
 // !END OF MODULE EIGHT
@@ -170,15 +175,18 @@ compChooses = () => {
   if (compInput <= .33) {
     compInput = "rock"
       const compRock = document.getElementById("comp_rock_hand")
-      compRock.style.visibility = "visible"
+    compRock.style.visibility = "visible"
+    console.log(`comp chose ${compInput}`)
   } else if (compInput >= .66) {
       compInput = "paper"
       const compPaper = document.getElementById("comp_paper_hand")
-      compPaper.style.visibility = "visible"
+    compPaper.style.visibility = "visible"
+    console.log(`comp chose ${compInput}`)
     } else {
       compInput = "scissors"
       const compScissors = document.getElementById("comp_scissors_hand")
       compScissors.style.visibility = "visible"
+      console.log(`comp chose ${compInput}`)
   }
 }
 // !END OF MODULE NINE
@@ -187,65 +195,68 @@ compChooses = () => {
 // !START OF MODULE TEN...DETERMINES IF THE USER OR COMP WINS OR LOSSES/KEEPS A SCORE
 // !ALSO MAKES RED X APPEAR OVER THE LOSER SIDE
   //USER ROCK LOSE CONDITION  
-rockLoser = () => {
-
-  if (userInput === "rock" && compInput === "paper") {
-    const userRockLosses = document.getElementById("user_red_x")
-    userRockLosses.style.visibility = "visible"
-    compScore = compScore + 1;
-
-  }
+if (userInput === "rock" && compInput === "paper") {
+  const userRockLosses = document.getElementById("user_red_x")
+  userRockLosses.style.visibility = "visible"
+  compScore = compScore + 1;
 }
 
-rockWinner = () => {
-  //USER ROCK WIN CONDITION 
-  if (userInput === "rock" && compInput === "scissors") {
-    const userRockWins = document.getElementById("comp_red_x")
-    userRockWins.style.visibility = "visible"
-    userScore = userScore + 1;
-  }
+//USER ROCK WIN CONDITION 
+if (userInput === "rock" && compInput === "scissors") {
+  const userRockWins = document.getElementById("comp_red_x")
+  userRockWins.style.visibility = "visible"
+  userScore = userScore + 1;
 }
 
-paperWinner = () => {
-  //USER PAPER WIN CONDITION
-  if (userInput === "paper" && compInput === "rock") {
-    const userPaperWins = document.getElementById("comp_red_x")
-    userPaperWins.style.visibility = "visible"
-    userScore = userScore + 1;
-  }
+
+//USER PAPER WIN CONDITION
+if (userInput === "paper" && compInput === "rock") {
+  const userPaperWins = document.getElementById("comp_red_x")
+  userPaperWins.style.visibility = "visible"
+  userScore = userScore + 1;
 }
 
-paperLoser = () => {
-  //USER PAPER LOSE CONDITION 
-  if (userInput === "paper" && compInput === "scissors") {
-    const userPaperLoses = document.getElementById("user_red_x")
-    userPaperLoses.style.visibility = "visible"
-    compScore = compScore + 1;
-  }
+
+//USER PAPER LOSE CONDITION 
+if (userInput === "paper" && compInput === "scissors") {
+  const userPaperLoses = document.getElementById("user_red_x")
+  userPaperLoses.style.visibility = "visible"
+  compScore = compScore + 1;
 }
 
-scissorLoser = () => {
-  //USER SCISSORS LOSE CONDITION
-  if (userInput === "scissors" && compInput === "rock") {
-    const userScissorsLoses = document.getElementById("user_red_x")
-    userScissorsLoses.style.visibility = "visible"
-    compScore = compScore + 1;
-  }
+
+//USER SCISSORS LOSE CONDITION
+if (userInput === "scissors" && compInput === "rock") {
+  const userScissorsLoses = document.getElementById("user_red_x")
+  userScissorsLoses.style.visibility = "visible"
+  compScore = compScore + 1;
 }
 
-scissorsWinner = () => {
-  //USER SCISSORS WIN CONDITION
+
+//USER SCISSORS WIN CONDITION
 if (userInput === "scissors" && compInput === "paper") {
   const userScissorsWins = document.getElementById("comp_red_x")
   userScissorsWins.style.visibility = "visible";
   userScore = userScore + 1;
-  }
 }
 // !END OF MODULE TEN
 
-// !START OF MODULE ELEVEN...
- 
+
+// !START OF MODULE ELEVEN... HIDE USERS CHOICE IMAGES...SHOULD BE ON A TIMER 
+hideUnusedChoice = () => {
+  const hideUnusedChoices = document.getElementsByClassName("user_hand")
+}
 // !END OF MODULE ELEVEN
+
+
+// !MODULE TWELVE...DISPLAYS THE SCORE
+// !IN CONSOLE AND ON SCREEN
+showScore = () => {
+  console.log(`The score is now User: ${userScore} to Computer: ${compScore}`)
+}
+
+// !END OF MODULE TWELVE
+
 // ?main function to run game
 main = () => {
 
@@ -255,7 +266,8 @@ main = () => {
   setTimeout(makeScissorsVisible, 3000)
   setTimeout(makeMiddleSectionVisible, 3900)
   setTimeout(makeShootVisible, 4000)
-  setTimeout(compChooses, 5500)
+  setTimeout(compChooses, 4500)
   setTimeout(hide_images_after_shown, 7000)
   setTimeout(hide_hand_container, 7000)
+  setTimeout(showScore, 8000);
 }
