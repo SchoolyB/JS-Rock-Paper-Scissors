@@ -1,0 +1,1 @@
+import { userScore,compScore } from "./userAndCompChoices";

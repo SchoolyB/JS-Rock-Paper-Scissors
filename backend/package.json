@@ -1,3 +1,20 @@
 {
+  "name": "javascript-rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "Marshall A. Burns",
+  "license": "",
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "node": "^16.13.1",
+    "prettier": "1.19.1"
+  },
+  "dependencies": {
+    "parcel": "^2.8.0"
+  },
   "type": "module"
 }
